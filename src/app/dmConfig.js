@@ -53,7 +53,13 @@ define({
 			moduleId: 'app/crudExample/fruits/Module',
 			selectedPrimaryNavItem: 'fruits',
 			baseServiceUrl: 'srv/crudExample/'
-		}
+		},
+		'authenticator': {
+			title: "Authenticator Management",
+			moduleId: 'app/authenticator/Module',
+			selectedPrimaryNavItem: 'profile',
+			baseServiceUrl: '/srv/feed/dynamic/rest/'
+		},
 
 	}
 });

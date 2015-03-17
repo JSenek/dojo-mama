@@ -20,10 +20,14 @@
     "dojo": "1.9.7",
     "dijit": "1.9.7",
     "dojox": "1.9.7",
+    "qrcode": "tptee/qrcodejs",
     "util": "dojo/util#1.9.7",
     "html5shiv": "3.7.2"
   },
   "overrides": {
+    "qrcode": {
+      "main": "qrcode.js"
+    },
     "dojo": {
       "ignore": true
     },

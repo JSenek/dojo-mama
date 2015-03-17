@@ -17,12 +17,31 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
-	
-//this file should display or redirect to a login page.
-//but for the demos let's just give them a session id and send them back to the app
-session_destroy();
-session_start();
 
-$_SESSION['authenticated'] = false;
-header('Location: /srv/login/index.php');
+namespace Common;
+
+class LoggingRestException extends \Exception
+{
+
+	public function __construct($errorMessage,$httpStatusCode, $identity = null)
+	{
+		$message = "";
+		
+		if(isset($httpStatusCode)){
+			$message .= 'RestException code: "'.$httpStatusCode.'"';
+		}
+
+		if($errorMessage){
+			$message = $message . '; Message: "'. $errorMessage.'"';
+		}
+
+		if($identity){
+			$message = $message . '; Identity: "'.$identity.'"';
+		}
+
+		error_log($message);
+
+		parent::__construct ( $errorMessage, $httpStatusCode );
+	}
+}
 ?>

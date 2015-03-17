@@ -86,11 +86,9 @@ define(['dojo/_base/declare',
 			// Destroy existing list view content
 			this._clearView();
 
-			layout.startProgress();
 			// Build out a list of items
 			this.module.getData().then(lang.hitch(this, this._handleData, objectId,e),
 				function(){
-					layout.stopProgress();
 				}
 			);
 		},
@@ -113,7 +111,6 @@ define(['dojo/_base/declare',
 			//     The dojo/router event
 			// parser:
 			//     A data parser with the response data already loaded into it
-			layout.stopProgress();
 			var item = parser.getItemById(objectId);
 			if(!item){
 				console.warn('cannot find item', objectId);

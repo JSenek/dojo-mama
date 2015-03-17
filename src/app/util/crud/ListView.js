@@ -79,7 +79,6 @@ define(['dojo/_base/declare',
 			domConstruct.empty(this.content.domNode);
 			delete this.lists;
 
-			layout.startProgress();
 
 			// build out the list view
 			this.module.getData().then(lang.hitch(this,
@@ -87,7 +86,6 @@ define(['dojo/_base/declare',
 					this._handle_getData(parser);
 				}
 			), function(err){
-				layout.stopProgress();
 			});
 		},
 
@@ -117,7 +115,6 @@ define(['dojo/_base/declare',
 				beforeText = this.getText('beforeText'),
 				afterText = this.getText('afterText');
 
-			layout.stopProgress();
 
 			this.lists = lists;
 

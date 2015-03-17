@@ -206,7 +206,6 @@ define(['dojo/_base/declare',
 				});
 				return;
 			}
-			layout.startProgress();
 
 			var field,
 				item = this._item,
@@ -240,13 +239,11 @@ define(['dojo/_base/declare',
 			console.log('Saving data');
 			this.module.saveData(this.viewType, item, this.getSaveRequest(diff)).then(
 				lang.hitch(this, function(data) {
-					layout.stopProgress();
 					// on success, re-route
 					this.module.setStale(true);
 					window.history.back();
 				}),
 				function(){
-					layout.stopProgress();
 				}
 			);
 		},

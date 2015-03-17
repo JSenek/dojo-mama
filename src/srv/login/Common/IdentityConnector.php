@@ -17,12 +17,16 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
-	
-//this file should display or redirect to a login page.
-//but for the demos let's just give them a session id and send them back to the app
-session_destroy();
-session_start();
+namespace Common;
+abstract class IdentityConnector{
 
-$_SESSION['authenticated'] = false;
-header('Location: /srv/login/index.php');
+	abstract public function init($config);
+	abstract public function checkCredentials($username, $password, $args);
+	abstract public function adminSetPassword($username, $password, $args);
+	abstract public function userSetPassword($username, $oldpassword, $newpassword, $args);
+	abstract public function getUserInfo($username);
+	abstract public function generatePassword($args);
+	abstract public function sanitize($attr, $value);
+	
+}
 ?>

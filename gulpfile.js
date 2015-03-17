@@ -270,6 +270,7 @@ gulp.task('release', ['release-bundle'], function(cb) {
 gulp.task('vendor-js', function() {
 	// create vendor.js from bower files and static js
 	var files = bowerFiles();
+	files.push('src/static/**.js');
 	gulp.src(files)
 		.pipe(concat('vendor.js'))
 		.pipe(gulpif(!config.debug, uglify()))
