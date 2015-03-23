@@ -63,7 +63,7 @@ if($username === false){
 	throw new \Common\LoggingRestException('invalid username.',400);
 }
 
-$userInfo = $store->query(array('username' => $_SESSION['username']));
+$userInfo = $store->query(array('username' => $username));
 
 if(!isset($userInfo[$_SERVER['MFA_LDAP_ATTR']])){
 	throw new \Common\LoggingRestException('Can\'t find a suitable '.$_SERVER['MFA_LDAP_ATTR'].' containing '.$_SERVER['MFA_ISSUER_LABEL_PREFIX'].":".$_SESSION['username'],404);
