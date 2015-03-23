@@ -1,0 +1,71 @@
+.metaNav {
+	color: @white;
+	background: transparent;
+	padding: 12px 10px !important;
+
+	@media only screen and (max-width: 1200px) {
+		background: @dark-gray;
+	}
+
+	a {
+		color: @white;
+		text-decoration: none;
+	}
+
+	.paw {
+		float: left;
+		max-height: 45px;
+	}
+
+	.title {
+		h2 {
+			display: inline-block;
+			margin: 0;
+			padding: 8px 0 0 10px;
+		}
+	}
+
+	.links {
+		text-align: right !important;
+
+		a.support {
+			display: inline-block;
+			padding-right: 15px;
+			position: relative;
+			text-transform: uppercase;
+			top: -12px;
+
+			h4 {
+				font-weight: 400;
+				margin: 0 0 0 0;
+				padding-top: 5px;
+			}
+		}
+	}
+
+	.profilePhotoLink {
+		display: inline-block;
+
+		.profilePhoto {
+			padding-left: 10px;
+			padding-top: 5px;
+			
+			img {
+				background: @dark-gray;
+				border-radius: 6px;
+				height: 35px;
+				width: 35px;
+
+				opacity: 0;
+				transition: opacity .2s;
+				&.loaded {
+					opacity: 1;
+				}
+
+				@media @medium-down {
+					max-height: 35px;
+				}
+			}
+		}
+	}
+}

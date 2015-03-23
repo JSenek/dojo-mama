@@ -1,0 +1,118 @@
+@tour-background-color: @purple;
+@tour-border-color: @purple;
+@tour-text-color: @white;
+@tour-link-color: @white;
+
+.tour {
+	background: @tour-background-color;
+	border-radius: 5px;
+	border: 5px solid @tour-border-color;
+	position: absolute;
+	z-index: 96;
+
+	.container {
+		color: @tour-text-color;
+		height: 100%;
+		padding: 10px;
+		position: relative;
+		width: 100%;
+		z-index: 98;
+	}
+
+	.arrow {
+		background: @tour-border-color;
+		height: 25px;
+		position: absolute;
+		transform: rotate(45deg);
+		width: 25px;
+		z-index: 97;
+	}
+
+	p.text {
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+	}
+
+	a.next {
+		color: @tour-link-color;
+		cursor: pointer;
+		float: right;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 10px;
+		text-decoration: underline;
+	}
+
+	/* Profile */
+	
+	&.profile {
+		margin-top: 20px;
+		right: 4px;
+		top: 41px;
+
+		@media @large-up {
+			right: 5px;
+			top: 50px;
+		}
+
+		.container {
+			height: 160px;
+			width: 300px;
+		}
+
+		.arrow {
+			right: 52px;
+			top: -15px;
+
+			@media @large-up {
+				right: 5px;
+			}
+		}
+	}
+
+	/* Academics */
+
+	&.academics {
+		left: 5px;
+		top: 132px;
+
+		@media @large-only {
+			left: 246px;
+			top: 140px;
+		}
+
+		.container {
+			height: 130px;
+			width: 300px;
+		}
+
+		.arrow {
+			top: -15px;
+			left: 50px;
+		}
+
+	}
+
+	/* Map */
+
+	&.map {
+		right: 45px;
+		top: 70px;
+
+		@media @large-up {
+			top: 135px;
+		}
+
+		.container {
+			height: 130px;
+			width: 240px;
+		}
+
+		.arrow {
+			right: -15px;
+			top: 5px;
+		}
+	}
+
+}

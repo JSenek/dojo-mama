@@ -264,7 +264,7 @@ class IdentityConnector extends \Common\IdentityConnector
             "cn", "dn",
             "loginExpirationTime", "loginGraceRemaining", "loginDisabled",
             "passwordExpirationTime",
-            "nspmPasswordPolicyDN", "clemsonInfoValidDate",
+            "nspmPasswordPolicyDN", "clemsonInfoValidDate"
         );
         $userInfo = array(
             'username' => $username,

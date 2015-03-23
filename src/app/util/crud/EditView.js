@@ -82,29 +82,6 @@ define(['dojo/_base/declare',
 			domClass.remove(this.domNode, 'editView');
 		},
 
-		_updateSubNav:function(/*Object*/item){
-			// summary: 
-			//     Updates the sub navigation
-			// item: 
-			//     the item object
-
-			//Since DisplayView does this already lets just call its function to 
-			//reduce code duplication.
-			if(this.module.parser.isDisplayable() !== true){
-				DisplayView.prototype._updateSubNav.apply(this,[item]);
-				return;
-			}
-
-			layout.updateSubNav({
-				title: item.getValueById('label')
-			});
-		},
-
-		buildItemDetailList: function(){
-			this.inherited(arguments);
-			layout.initializeSelects();
-		},
-
 		_buildFieldListItem:function(/*Object*/field,/*Object*/item,/*Object*/list){
 			// summary: 
 			//     Builds out a single list item

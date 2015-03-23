@@ -134,6 +134,7 @@ if(isset($_POST['u']) && isset($_POST['p'])){
 		$userInfo = $result->userInfo;
 
 	} else {
+		error_log("$username gave incorrect credentials.");
 		renderLogin("Bad username or password");
 		return;
 	}

@@ -1,0 +1,53 @@
+.primaryNav, .mobilePrimaryNav {
+	background: @dark-gray;
+	
+	.navItem {
+		height: 55px;
+		line-height: 30px;
+		transform: translate3d(0, 0, 0);
+
+		.primaryNav.closed & {
+			display: none;
+		}
+
+		a {
+			color: @white;
+			display: block;
+			height: 55px;
+			text-decoration: none;
+			transition: all 0.3s;
+			
+			&:hover {
+				color: #fff;
+			}
+		}
+
+		.slide-color {
+			height: 55px;
+			position: absolute;
+			width: 0px;
+			transition: width 0.3s;
+		}
+
+		.icon-container {
+			opacity: 0.99; // fixes bizarre z-index bug
+			text-align: center !important;
+
+			.icon {
+				font-size: 24px;
+				height: 55px;
+				padding-top: 12px;
+				z-index: 5;
+			}
+		}
+
+		.text {
+			font-weight: bold;
+			height: 55px;
+			padding-left: 5px !important;
+			padding-top: 12px;
+			text-transform: uppercase;
+		}
+	}
+}
+

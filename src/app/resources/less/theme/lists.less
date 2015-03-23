@@ -1,0 +1,80 @@
+.mblEdgeToEdgeList {
+	background: transparent;
+	list-style: none;
+	margin-top: 0;
+	overflow-x: hidden;
+	padding: 0;
+	position: relative;
+
+	a {
+		color: @light-black;
+		display: block !important;
+		height: auto;
+		padding: 13px 0;
+		text-decoration: none;
+	}
+
+	.listItem {
+		border-bottom: 1px solid @light-beige;
+		padding: 13px 0;
+		position: relative;
+		width: 100%;
+
+		&.linkListItem {
+			padding: 0;
+		}
+
+		@media @small-only {
+			height: auto;
+		}
+
+		&:last-child {
+			border: none;
+		}
+
+		.text {
+			font-weight: 400;
+			line-height: 1.4;
+		}
+
+		.rightText {
+			font-weight: 400;
+			text-align: right !important;
+		}
+
+		input.rightText {
+			padding: 5px 0 5px 5px !important;
+			text-align: left !important;
+		}
+
+		.icon {
+			color: lighten(@light-gray, 20%);
+			display: inline-block;
+			font-size: 24px;
+			margin-top: -2px;
+			vertical-align: middle;
+
+			&::before {
+				float: right !important;
+			}
+		}
+
+		.editView &, 
+		.displayView & {
+			&:last-child {
+				border-bottom: 1px solid @light-beige;
+			}
+		}
+	}
+
+	.hasRightText.hasIcon {
+		@media @small-only {
+			.icon {
+				margin-top: -20px;
+			}
+			.rightText {
+				text-align: left !important;
+			}
+		}
+	}
+}

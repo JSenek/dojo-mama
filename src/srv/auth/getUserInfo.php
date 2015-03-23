@@ -26,7 +26,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 session_start();
 
 if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] === true){
-	echo '{"authenticated":true,"username":"JOEUSER", "name":"Joe User"}';
+	echo '{"authenticated":true,"username":"'.$_SESSION['username'].'"}';
 }else{
 	echo '{"authenticated":false}';
 }

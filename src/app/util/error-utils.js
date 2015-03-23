@@ -22,9 +22,8 @@ define(['dojo/_base/declare',
 		'dojo/_base/lang',
 		'dojo/topic',
 		'app/layout/layout',
-		'app/util/toaster',
-		'app/util/update-utils'
-], function(declare, kernel, lang, topic, layout, toaster, updateUtils) {
+		'app/util/toaster'
+], function(declare, kernel, lang, topic, layout, toaster) {
 
 	var ErrorUtilities = declare([], {
 
@@ -82,8 +81,6 @@ define(['dojo/_base/declare',
 
 			});
 
-			// Check to see if there was an update
-			updateUtils.checkForUpdate().then(handleError /*, this deferred is always resolved */);
 		},
 
 		clearErrors: function() {

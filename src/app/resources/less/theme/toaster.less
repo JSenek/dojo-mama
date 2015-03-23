@@ -1,0 +1,59 @@
+.toasterColorMixin (@fg, @bg) {
+	color: @fg;
+	a {
+		color: @fg;
+	}
+	background-color: @bg;
+	border-top: 1px solid darken(@bg, @darken-ratio);
+	border-bottom: 1px solid darken(@bg, @darken-ratio);
+	.toasterClose {
+		color: @fg;
+	}
+}
+
+#toaster {
+	background: inherit;
+}
+
+.toasterMessage {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+	clear: both;
+	position: relative;
+	z-index: 100;
+	transition: opacity .5s;
+	opacity: 1;
+
+	&.closed {
+		opacity: 0;
+	}
+
+	p.toasterText {
+		font-size: 18px;
+		margin: 0;
+		padding: .5em 2em .5em 1em;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	&.toasterError { .toasterColorMixin(@toasterErrorFg, @toasterErrorBg); }
+	&.toasterInformation { .toasterColorMixin(@toasterInformationFg, @toasterInformationBg); }
+	&.toasterSuccess { .toasterColorMixin(@toasterSuccessFg, @toasterSuccessBg); }
+	&.toasterWarning { .toasterColorMixin(@toasterWarningFg, @toasterWarningBg); }
+
+	.toasterClose {
+		cursor: pointer;
+		font-size: 24px;
+		font-weight: bold;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 4px;
+		width: 34px;
+		z-index: 101;
+	}
+}

@@ -1,0 +1,156 @@
+body.crud #main {
+	.mblPane {
+		.mblPane {
+
+			h1, h2, h3, h4 {
+			}
+		}
+	}
+
+	.beforeText {
+		margin: 0;
+		padding-bottom: 20px;
+	}
+
+	.listView {
+		padding-top: 20px;
+	}
+
+	select {
+		background-image: none;
+		
+		@media @medium-only {
+			.ios & {
+				width: 95% !important;
+			}
+		}
+
+		@media @small-only {
+			.ios & {
+				width: 93% !important;
+			}
+		}
+	}
+
+	input {
+		margin: 0 !important;
+	}
+
+	h2 {
+		font-weight: 500;
+		margin: 0;
+	}
+
+	h3 {
+		display: inline-block;
+		font-weight: 500;
+		margin: 0;
+	}
+
+	h4 {
+		font-weight: 500;
+		margin: 0;
+	}
+
+	p {
+		line-height: 1.2;
+	}
+
+	.beforeText, .afterText {
+		display: inline-block;
+	}
+
+	.buttonBar {
+		display: inline-block;
+		float: right;
+		margin-bottom: 20px;
+		text-align: right;
+	}
+
+	.button {
+		margin-bottom: 10px;
+		margin-left: 5px;
+
+	}
+
+	.controls {
+		margin-top: 10px;
+	}
+
+	.crudListMessage {
+		display: inline-block;
+		font-weight: normal;
+		line-height: 1.2;
+		margin-top: 0;
+	}
+
+	.listItem.required {
+		.text::after {
+			content: '*';
+			display: inline-block;
+			font-size: 16px;
+			font-weight: 400 !important;
+			padding-left: 5px;
+		}
+	}
+}
+
+body.name .mblEdgeToEdgeList {
+	margin: 0;
+
+	.listItem {
+		padding-top: 0;
+	}
+}
+
+body.validation #main {
+	p {
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	.beforeList {
+		padding-bottom: 20px;
+	}
+
+	.afterText {
+		padding-bottom: 20px;
+	}
+
+	.mblEdgeToEdgeList {
+		padding-bottom: 15px;
+	}
+}
+
+body.tiger-one-photos #main {
+	.listView {
+		padding-bottom: 20px;
+	}
+
+	.afterText {
+		padding-bottom: 15px;
+	}
+
+	img {
+		max-width: 100%;
+		padding: 15px 0;
+	}
+}
+
+body.security-questions #main {
+	.afterText {
+		padding-bottom: 20px;
+	}
+}
+
+body.authenticator #main {
+
+	h3 {
+		padding: 20px 0;
+	}
+
+	.mblSwitch {
+		margin-top: 5px;
+		width: 94px;
+	}
+}

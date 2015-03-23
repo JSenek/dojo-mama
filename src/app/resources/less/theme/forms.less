@@ -1,0 +1,73 @@
+// Firefox dotted line fix
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+}
+
+input[type="text"], textarea {
+	&::-webkit-input-placeholder {
+		color: #777;
+	}
+
+	&::-moz-placeholder {
+		color: #777;
+	}
+
+	&:-ms-input-placeholder {  
+		color: #777;
+	}
+
+	-webkit-appearance: none;
+	border-radius: 3px;
+	border: 1px solid rgb(205,203,195);
+	color: rgb(77,77,77);
+	display: block;
+	font-size: 18px;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	padding: 5px 0 5px 5px;
+	position: relative;
+	transition: all 0.2s;
+	width: 100%;
+
+	&:focus {
+		border: 1px solid #444;
+		box-shadow: 1px 1px 5px 1px rgb(205,203,195);
+		transition: all 0.2s;
+	}
+}
+
+input[type="text"] {
+	height: 40px;
+}
+
+textarea {
+	height: auto;
+}
+
+select {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	background-color: #fff;
+	border-radius: 3px;
+	border: 1px solid rgb(205,203,195);
+	box-sizing: content-box;
+	font-size: 17px;
+	height: 40px;
+	line-height: 1;
+	// non-calc browsers (Android stock) will get the first prop
+	// others get the nice calc fix 
+	width: 99.5%;
+	width: ~"calc(100% - 2px)";
+}
+
+@-moz-document url-prefix() {
+	select {
+		height: 20px;
+	}
+}

@@ -1,3 +1,58 @@
-@background: white;
-@text-color: black;
+@orange: #ea6a20;
+
+@dark-gray: rgb(64, 64, 64);
+@light-gray: darken(#86898C, 20%);
+
+@white: lighten(@orange, 47%);
+@black: #000000;
+
+@dark-beige: #cdcbc3;
+@light-beige: #e7e7de;
+
+@light-black: #373737;
+
+@purple: #522d80;
+
+@darken-ratio: 15%;
+@lighten-ratio: 20%;
+
+@orange-dark: darken(@orange, @darken-ratio);
+@orange-light: lighten(@orange, @lighten-ratio);
+
+@text-color: @light-black;
 @link-color: #F66733;
+
+// toaster
+
+// background colors
+@background: @white;
+@toasterErrorBg: #cf4a29;
+@toasterInformationBg: #297282;
+@toasterSuccessBg: #609231;
+@toasterWarningBg: rgb(255, 176, 0);
+
+// foreground colors
+@toasterErrorFg: @white;
+@toasterInformationFg: @white;
+@toasterSuccessFg: @white;
+@toasterWarningFg: @light-black;
+
+@darken-ratio: 15%;
+@lighten-ratio: 20%;
+@mix-ratio: 30%;
+@saturate-ratio: 15%;
+@degree-base: 90deg;
+
+@map: rgb(114, 167, 191);
+@directory: #947147;
+@news: #4c765e;
+@events: #715164;
+@transit: #3b5998;
+@safety: #cf4a29;
+@campus-life: spin(#667827, 10);
+@profile: @orange;
+@social: #3b5998;
+
+
+// layout
+@subnav-height: 55px;

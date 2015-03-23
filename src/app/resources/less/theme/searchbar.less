@@ -1,0 +1,121 @@
+.searchBar {
+	.searchBarMixin;
+}
+
+body.selectorBar {
+	.selectorBar {
+		.selectorBarMixin;
+	}
+}
+
+.searchBarMixin {
+	z-index: 2;
+
+	.searchButtonContainer {
+		padding-right: 0;
+	}
+
+	input {
+		box-shadow: none !important;
+		height: 38px !important;
+
+		@media @large-up {
+			height: 40px !important;
+		}
+	}
+
+	.textBoxWrapper {
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+	}
+
+	.mblTextBox {
+		border-radius: 6px;
+		border: none;
+		color: @light-black;
+		font-size: 17px;
+		margin: 0;
+		padding: 5px 10px;
+		position: relative;
+		width: 100%;
+	}
+
+	.clearButton {
+		background: transparent;
+		border: none;
+		color: #666;
+		font-size: 25px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		right: 6px;
+		top: 8px;
+		visibility: hidden;
+	}
+
+	.clearButton.visible {
+		visibility: visible;
+	}
+
+	.searchButton {
+		height: 40px;
+		min-width: 0;
+		width: 100%;
+	}
+}
+
+.selectorBarMixin {
+	text-align: right;
+	float: right;
+
+	.button {
+		min-width: 60px;
+	}
+
+	a {
+		line-height: 39px !important;
+		margin-right: 10px;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.prevMonthButton, .nextMonthButton {
+		min-width: 14px !important;
+		position: relative;
+	}
+
+	.prevMonthButton {
+		.iconmixin;
+		.icon-arrow-left7;
+		margin-right: 5px !important;
+	}
+
+	.monthButton {
+		margin-right: 5px !important;
+		width: 50px !important
+	}
+
+	.nextMonthButton {
+		.iconmixin;
+		.icon-arrow-right7;
+		margin-right: 0;
+	}
+
+	.todayButton {
+		display: inline-block;
+	}
+
+	@media only screen and (min-width: 500px) and (max-width: 64em) {
+		float: none;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 500px) {
+		float: none;
+		text-align: center;	
+	}
+}

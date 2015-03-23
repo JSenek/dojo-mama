@@ -1,0 +1,52 @@
+.button {
+	background-color: darken(@orange, 10%);
+	border-radius: 6px;
+	border: none;
+	color: @white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 35px;
+	line-height: 35px;
+	min-width: 85px;
+	padding: 0 10px;
+	text-align: center;
+	text-decoration: none !important;
+	text-transform: uppercase;
+	width: auto;
+
+	.subNav &, .optionalBarMT & {
+		height: 40px;
+		line-height: 40px;
+	}
+
+	.no_touch &:hover, &:active, &:focus {
+		color: #fff;
+	}
+
+	&:disabled {
+		background: @dark-gray;
+	}
+}
+
+// active button styles
+body.athletics.athleticsNews .newsButton {
+	background: darken(@orange, @darken-ratio * 2) !important;
+}
+
+body.athletics.athleticsSchedule .scheduleButton {
+	background: darken(@orange, @darken-ratio * 2) !important;
+}
+
+body.athletics.athleticsResults .resultsButton {
+	background: darken(@orange, @darken-ratio * 2) !important;
+}
+
+body.events.weekView .weekButton {
+	background: darken(@events, @darken-ratio * 2) !important;
+}
+
+body.events.monthView .monthButton {
+	background: darken(@events, @darken-ratio * 2) !important;
+}

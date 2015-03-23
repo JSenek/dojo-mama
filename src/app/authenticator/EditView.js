@@ -95,8 +95,6 @@ define(['dojo/_base/declare',
 			text = this.getText(textKey);
 
 			domConstruct.create('h3',{innerHTML: text},this.content.domNode,'first');
-			layout.initializeSelects();
-
 		},
 
 		displayTextFieldInput: function(/*Object*/ field) {

@@ -1,0 +1,70 @@
+{
+    "items": [
+        {
+            "data": {
+                "label": "Identity-wide Authenticator",
+                "objectId": "authenticator#selfservice#identity-wide",
+                "objectURI": "Authenticator/authenticator%23selfservice%23identity-wide"
+            },
+            "properties": {
+                "defaults": {
+                    "editable": false,
+                    "required": false,
+                    "type": "text"
+                },
+                "deletable": false,
+                "fields": [
+                    {
+                        "editable": true,
+                        "id": "use2pass",
+                        "label": "Authenticator",
+                        "required": true,
+                        "type": "switch"
+                    },
+                    {
+                        "editable": false,
+                        "id": "key",
+                        "label": "Secret Key",
+                        "required": false
+                    },
+                    {
+                        "editable": false,
+                        "id": "qrcode",
+                        "label": "QR Code",
+                        "required": false,
+                        "type": "QRCode"
+                    },
+                    {
+                        "editable": true,
+                        "id": "code",
+                        "label": "Verification Code",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "meta": {
+                    "type": "userIDs"
+                }
+            }
+        }
+    ],
+    "properties": {
+        "create": false,
+        "create_properties": [],
+        "display": false,
+        "displayOrder": [
+            "userIDs"
+        ],
+        "edit": true,
+        "noList": true,
+        "remove": false,
+        "types": {
+            "defaults": {
+                "creatable": false
+            },
+            "userIDs": {
+                "categoryLabel": "Authenticators"
+            }
+        }
+    }
+}

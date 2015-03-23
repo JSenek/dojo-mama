@@ -135,8 +135,6 @@ define(['dojo/_base/declare',
 
 			this._item = item;
 
-			this._updateSubNav(item);
-
 			if(beforeText){
 				domConstruct.create('h3', {innerHTML: beforeText},this.content.domNode);
 			}
@@ -159,17 +157,6 @@ define(['dojo/_base/declare',
 
 			this._buildItemControls(item);
 
-		},
-
-		_updateSubNav:function(/*Object*/item){
-			// summary: 
-			//     Updates the sub navigation
-			// item: 
-			//     the item object
-
-			layout.updateSubNav({
-				title: item.getValueById('label')
-			});
 		},
 
 		_buildFieldListItem:function(/*Object*/field,/*Object*/item,/*Object*/list){

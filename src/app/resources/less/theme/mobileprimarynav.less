@@ -1,0 +1,48 @@
+@mobile-nav-top: 52px;
+@mobile-nav-height: 278px;
+
+.mobilePrimaryNav {
+	z-index: 20;
+	background: @dark-gray;
+	border-bottom: 3px solid @light-gray;
+	position: absolute;
+	top: @mobile-nav-top;
+	left: 0;
+	transform: translateY(0);
+	transition: transform 0.4s cubic-bezier(0.215, 0.610, 0.355, 1.000); // opening transition
+
+	&.closed {
+		transform: translateY(-@mobile-nav-height - @mobile-nav-top);
+	}
+
+	a {
+		color: @white !important;
+	}
+
+	.slide-color {
+		display: none;
+	}
+
+	.navItem {
+		color: @white;
+		position: relative;
+		
+		.text { 
+			font-size: 14px;
+			position: relative;
+			padding-left: 0 !important;
+		}
+	}
+}
+
+.mobilePrimaryNavOverlay {
+	position: absolute;
+	top: @mobile-nav-top;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 19;
+	&.closed {
+		display: none;
+	}
+}

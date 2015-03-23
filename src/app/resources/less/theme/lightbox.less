@@ -1,0 +1,93 @@
+.lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(0,0,0);
+	z-index: 10000;
+
+
+	.button {
+		font-size: 30px;
+		cursor: pointer;
+			margin: 2px;
+	}
+
+	.lightboxTitleBar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgb(0,0,0);
+		color: white;
+		text-align: center;
+		.lightboxExit {
+			.button;
+			position: fixed;
+			right: 10px;
+			top: 5px;
+		}
+		.lightboxTitle {
+			margin-top: 12px;
+			margin-left: 50px;
+			margin-right: 50px;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+
+	.lightboxToolbar {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 40px;
+		background-color: rgb(0,0,0);
+		color: white;
+		text-align: center;
+
+
+		.lightboxPrevButton {
+			display: inline-block;
+			.button;
+			text-align: center;
+		}
+
+		.lightboxNextButton {
+			display: inline-block;
+			.button;
+			text-align: center;
+		}
+		.lightboxPlayButton {
+			display: inline-block;
+			text-align: center;
+			width: 100px;
+			.button;
+		}
+	}
+
+	.lightboxItem {
+		position: absolute;
+		width: 100px;
+		margin-left: -50px;
+		height: 100px;
+		margin-top: -50px;
+		
+		background-color: rgb(50,50,50);
+		left: 50%;
+		top: 50%;
+
+		/*
+		-webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.3)));
+		*/
+
+		&.transition {
+			transition: transform 0.5s;
+			-webkit-transition: -webkit-transform 0.5s;
+		}
+
+	}
+}
+
