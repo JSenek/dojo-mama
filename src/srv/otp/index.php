@@ -111,6 +111,8 @@ if($restPoint == 'exists'){
 		throw new \Common\LoggingRestException('The given code is invalid.',400);
 	}
 
+	header("HTTP/1.1 200 OK");
+	return;
 }else{
 	throw new \Common\LoggingRestException("rest endpoint is all whack ($restPoint).",400);
 }
